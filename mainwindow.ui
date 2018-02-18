@@ -6,58 +6,71 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>445</width>
-    <height>405</height>
+    <width>573</width>
+    <height>520</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
-      <width>80</width>
-      <height>21</height>
+      <y>20</y>
+      <width>120</width>
+      <height>111</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Load image</string>
+    <property name="title">
+     <string>File</string>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>0</y>
-      <width>80</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Save image</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>0</y>
-      <width>80</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>To gray</string>
-    </property>
+    <widget class="QPushButton" name="openButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Open</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="resetButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="PictureBox">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>160</y>
+      <x>150</x>
+      <y>10</y>
       <width>47</width>
       <height>13</height>
      </rect>
@@ -66,18 +79,135 @@
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="dizeringButton">
+   <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>0</y>
-      <width>80</width>
-      <height>21</height>
+      <x>20</x>
+      <y>140</y>
+      <width>101</width>
+      <height>111</height>
      </rect>
     </property>
-    <property name="text">
+    <property name="title">
+     <string>Gray</string>
+    </property>
+    <widget class="QRadioButton" name="rgbRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>84</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RGB</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="hsvRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>84</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>HSV</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="isGrayCheckbox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>72</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>is gray</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
      <string>Dizering</string>
     </property>
+    <widget class="QPushButton" name="dizeringButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dizering</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="isSimple">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>84</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Simple</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="isFloyd">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>84</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Floyd</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="noDizer">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>84</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>No dizering</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="isJarvis">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>84</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Jarvis</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -85,7 +215,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>445</width>
+     <width>573</width>
      <height>20</height>
     </rect>
    </property>
