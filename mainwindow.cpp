@@ -16,15 +16,6 @@ DizeringMatrix::~DizeringMatrix(){
 
 void MainWindow::smoothDizering(DizeringMatrix* matrix){
     on_resetButton_clicked();
-    /*
-    int colorCounter = 3;
-    if (ui->isGrayCheckbox->isChecked()){
-        toGray();
-        colorCounter = 1;
-    }
-    colorArr = new int(colorCounter);
-    */
-    //for (int i = 0; i < )
     if (ui->isGrayCheckbox->isChecked())
         toGray();
     int tempX, tempY, colorCount = 3;
@@ -34,9 +25,10 @@ void MainWindow::smoothDizering(DizeringMatrix* matrix){
     errMap[qMakePair(0, 0)] = new double(colorCount);
     for (int i = 0; i < colorCount; i++)
         errMap[qMakePair(0, 0)][i] = 0;
+
     for (int i = 0; i < pic->width(); i++)
         for (int j = 0; j < pic->height(); j++){
-            //qDebug() << "pixel " << i << " " << j << '\n';
+            qDebug() << "pixel " << i << " " << j << '\n';
             for (int c = 0; c < colorCount; c++){
                 // qDebug() << "color " << (c + 1) << '\n';
                 error = getColor(i, j, c);
